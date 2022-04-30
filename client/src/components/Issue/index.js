@@ -31,7 +31,6 @@ const Issue = () => {
     },
     onCompleted: (data) => {
       if(data.updateIssue.success) {
-        console.log("aakjaj",data.updateIssue.success)
         history.push("/")
       }
     }
@@ -64,7 +63,19 @@ const Issue = () => {
               />
             </div>
             <div className="w-1/2 m-auto">
-              <button className="bg-blue-500 text-center w-full rounded-md text-white mt-3" onClick={updateIssue}>Update</button>
+              <button 
+                className="bg-blue-500 text-center w-full rounded-md text-white mt-3" 
+                onClick={() => {
+                  if(title_ && description_) {
+                    updateIssue()
+                  }
+                  else{ 
+                    alert("Please fill all the fields")
+                  }
+                }
+                }>
+                  Update
+                </button>
             </div>
         </>
       }

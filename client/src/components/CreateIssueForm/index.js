@@ -13,6 +13,10 @@ const CreateIssueForm = () => {
       title,
       description
     },
+    onCompleted: () => {
+      setTitle("");
+      setDescription("");
+    },
     refetchQueries: ["issues"]
   });
 
@@ -42,7 +46,12 @@ const CreateIssueForm = () => {
       <div className="w-1/2 m-auto">
         <button 
           className="bg-blue-500 text-center w-full rounded-md text-white mt-3" 
-          onClick={createIssue}
+          onClick={() => {
+            if(title && description) {
+              createIssue()
+            }
+            else alert("Please fill all the fields")
+          }}
         >
             Create
         </button>
