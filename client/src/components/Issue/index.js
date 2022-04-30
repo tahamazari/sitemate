@@ -21,7 +21,6 @@ const Issue = () => {
   useEffect(() => {
     setTitle(data?.issue.title)
     setDescription(data?.issue.description)
-    console.log("ppp",data)
   }, [data])
 
   const [updateIssue] = useMutation(UPDATE_ISSUE, {
@@ -39,7 +38,7 @@ const Issue = () => {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-1/2 m-auto">
       {
         loading ? <div className="w-full mt-10 text-center">Loading...</div> : 
         <>

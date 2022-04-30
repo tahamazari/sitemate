@@ -17,7 +17,7 @@ const CreateIssueForm = () => {
   });
 
   return(
-    <div className="w-full">
+    <div className="w-1/2 m-auto">
       <div className="w-1/2 m-auto my-5 text-center text-lg font-bold">Create Issue</div>
       <div className="w-1/2 m-auto">
         <input

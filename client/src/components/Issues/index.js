@@ -16,7 +16,7 @@ const Issues = () => {
   })
 
   return(
-    <div>
+    <div className="w-1/2 m-auto">
       {
         loading ? <div className="w-full text-center mt-8">Loading...</div> : 
         <div className="w-full">
